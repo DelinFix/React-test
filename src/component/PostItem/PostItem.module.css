@@ -1,0 +1,29 @@
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.post__title_text {
+    font-size: 22px;
+    text-wrap: normal;
+    width: 500px;
+}
+
+.post__content {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-right: 70px;
+}
+
+.post__btns {
+    display: flex;
+}

@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
-import MyInput from "../component/UI/input/MyInput";
-import MyButton from "../component/UI/button/MyButton";
-import {AuthContext} from "../context";
+import React, {useContext} from 'react'
+import {AuthContext} from "../context"
+import MyInput from "../component/UI/input/MyInput"
+import MyButton from "../component/UI/button/MyButton"
 
 const Login = () => {
-    const {isAuth, setIsAuth} = useContext(AuthContext)
+    const { setIsAuth } = useContext(AuthContext)
 
     const  login = event => {
         event.preventDefault()
@@ -16,12 +16,12 @@ const Login = () => {
         <div>
             <h1>Login page</h1>
             <form onSubmit={login}>
-                <MyInput type="text" placeholder="Enter log"/>
-                <MyInput type="password"placeholder="Enter pass"/>
+                <MyInput type="text" placeholder="Enter login"/>
+                <MyInput type="password" placeholder="Enter password"/>
                 <MyButton>Enter</MyButton>
             </form>
         </div>
-    );
-};
+    )
+}
 
-export default Login;
+export default Login

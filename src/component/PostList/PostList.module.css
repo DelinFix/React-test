@@ -1,0 +1,9 @@
+.textCenter {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-family: Roboto, serif;
+}

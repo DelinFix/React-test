@@ -1,10 +1,12 @@
-import React, {useContext} from 'react';
-import {Link} from "react-router-dom";
-import MyButton from "../button/MyButton";
-import {AuthContext} from "../../../context";
+import React, {useContext} from 'react'
+import {Link} from "react-router-dom"
+import MyButton from "../button/MyButton"
+import {AuthContext} from "../../../context"
+
+import styles from './Navbar.module.css'
 
 const Navbar = () => {
-    const {isAuth,setIsAuth} = useContext(AuthContext)
+    const { setIsAuth } = useContext(AuthContext)
 
     const logout = () => {
         setIsAuth(false)
@@ -12,16 +14,16 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar">
-            <MyButton onClick={logout}>
+        <div className={styles.navbar}>
+            <MyButton onClick={logout} warning={true}>
                 Exit
             </MyButton>
-            <div className="navbar__links">
-                <Link to="/about" className="navbar__link">About website</Link>
-                <Link to="/posts" className="navbar__link">Posts</Link>
+            <div className={styles.navbar__links}>
+                <Link to="/about" className={styles.navbar__link}>About website</Link>
+                <Link to="/posts" className={styles.navbar__link}>Posts</Link>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar

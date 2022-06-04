@@ -1,0 +1,18 @@
+.App {
+    width: 800px;
+    margin-bottom: 50px;
+}
+
+.line {
+    margin: 15px 0;
+}
+
+.loaderWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.limit:focus-within {
+    outline: none;
+}

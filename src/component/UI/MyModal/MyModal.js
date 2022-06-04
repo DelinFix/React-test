@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 import styles from './MyModal.module.css'
 
 const MyModal = ( {children, visible, setVisible} ) => {
-
     const  rootClass = [styles.myModal]
+
     if(visible) {
         rootClass.push(styles.active)
     }
@@ -15,7 +15,7 @@ const MyModal = ( {children, visible, setVisible} ) => {
                 {children}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default MyModal;
+export default MyModal

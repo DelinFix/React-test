@@ -1,8 +1,10 @@
-import About from "../pages/About";
-import Posts from "../pages/Posts";
-import PostIdPage from "../pages/PostIdPage";
-import React from "react";
-import Login from "../pages/Login";
+import React from "react"
+
+import About from "../pages/About/About"
+import Posts from "../pages/Posts/Posts"
+import Login from "../pages/Login"
+import PostIdPage from "../pages/PostIdPage/PostIdPage"
+
 
 export const  priviteRoutes = [
     {path: '/about', element: <About/>},

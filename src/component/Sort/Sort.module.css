@@ -1,0 +1,12 @@
+.filter {
+    margin: 10px 30px 10px 0;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid teal;
+    font-family: Roboto, serif;
+}
+
+.filter:focus-visible {
+    outline: none;
+}

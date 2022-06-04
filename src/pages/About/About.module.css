@@ -1,0 +1,24 @@
+.root {
+    text-align: center;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 600;
+    font-family: Roboto, serif;
+}
+
+.subtitle {
+    text-align: justify;
+    font-size: 28px;
+    font-family: Roboto, serif;
+    width: 800px;
+}
+
+.thanks {
+    font-size: 30px;
+    margin: 20px auto;
+    font-weight: 600;
+    font-family: Roboto, serif;
+    width: 500px;
+}

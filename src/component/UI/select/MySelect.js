@@ -1,19 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-const MySelect = ({options, defaultValue, value, onChange}) => {
+const MySelect = ( {options, defaultValue, value, onChange, ...props} ) => {
     return (
         <select
             value={value}
             onChange={event => onChange(event.target.value)}
+            {...props}
         >
-            <option disabled value="">{defaultValue}</option>
+            <option disabled value="">
+                {defaultValue}
+            </option>
             {options.map(option =>
                 <option key={option.value} value={option.value}>
                     {option.name}
                 </option>
             )}
         </select>
-    );
-};
+    )
+}
 
-export default MySelect;
+export default MySelect

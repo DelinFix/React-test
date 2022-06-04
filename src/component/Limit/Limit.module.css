@@ -1,0 +1,11 @@
+.limit {
+    border: 1px solid teal;
+    padding: 5px;
+    border-radius: 5px;
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.limit:focus-visible {
+    outline: none;
+}
