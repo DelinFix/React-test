@@ -15,7 +15,7 @@
  
 ---
 
-To start project type:\
+To start project type:
 ```
 npm run
 ```
