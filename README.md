@@ -15,7 +15,11 @@
  
 ---
 
-To start project type:
+To download dependencies:
 ```
-npm run
+npm i
+```
+Then:
+```
+npm start
 ```
