@@ -6,6 +6,7 @@ import MyButton from "./UI/button/MyButton"
 const PostForm = ( {create} ) => {
     const [post, setPost] = useState({title: '', body: ''})
 
+    //Calls the create post function with title, body and id
     const addNewPost = (e) => {
         e.preventDefault()
         create( {...post, id: Date.now()} )

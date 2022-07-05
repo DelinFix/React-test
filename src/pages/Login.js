@@ -6,7 +6,9 @@ import MyButton from "../component/UI/button/MyButton"
 const Login = () => {
     const { setIsAuth } = useContext(AuthContext)
 
-    const  login = event => {
+    // A stub function that adds to local
+    // storage whether the user is authorized
+    const login = event => {
         event.preventDefault()
         setIsAuth(true)
         localStorage.setItem('auth', 'true')

@@ -7,7 +7,8 @@ import CSSTransition from "react-transition-group/cjs/CSSTransition"
 
 import styles from './PostList.module.css'
 
-const PostList = ( {posts, title, remove} ) => {
+const PostList = ( props ) => {
+    const { posts, title, remove } = props
     return (
         <div>
             {posts.length < 0
@@ -19,13 +20,13 @@ const PostList = ( {posts, title, remove} ) => {
                     </h1>
                     <TransitionGroup>
                         {posts.map(post => (
-                                <CSSTransition
-                                    key={post.id}
-                                    timeout={500}
-                                    classNames="post"
-                                >
-                                    <PostItem remove={remove} post={post}/>
-                                </CSSTransition>
+                            <CSSTransition
+                                key={post.id}
+                                timeout={500}
+                                classNames="post"
+                            >
+                                <PostItem remove={remove} post={post}/>
+                            </CSSTransition>
                         ))}
                     </TransitionGroup>
                 </>)}

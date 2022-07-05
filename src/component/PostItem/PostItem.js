@@ -6,7 +6,8 @@ import MyButton from "../UI/button/MyButton"
 
 import styles from './PostItem.module.css'
 
-const PostItem = ( {remove, post} ) => {
+const PostItem = ( props ) => {
+    const { remove, post } = props
     const navigate = useNavigate()
 
     return(

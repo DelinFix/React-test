@@ -2,7 +2,9 @@ import React from 'react'
 
 import MyInput from "./UI/input/MyInput"
 
-const Find = ( {filter, setFilter} ) => {
+const Find = ( props ) => {
+    const {filter, setFilter} = props
+
     return (
         <MyInput
             value={filter.query}

@@ -3,7 +3,8 @@ import MySelect from "../UI/select/MySelect"
 
 import styles from './Sort.module.css'
 
-const Sort = ( {filter, setFilter} ) => {
+const Sort = ( props ) => {
+    const { filter, setFilter } = props
     return (
         <MySelect
             value={filter.sort}

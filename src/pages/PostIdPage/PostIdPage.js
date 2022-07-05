@@ -14,11 +14,13 @@ const PostIdPage = () => {
     const [post, setPost] = useState({})
     const [comments, setComments] = useState([])
 
+    // Fetching post information by id
     const [fetchPostById, isLoading] = useFetching(async (id) => {
         const response = await PostService.getById(id)
         setPost(response.data)
     })
 
+    // Fetching post comments by id
     const [fetchComments, isComLoading] = useFetching(async (id) => {
         const response = await PostService.getCommentsById(id)
         setComments(response.data)

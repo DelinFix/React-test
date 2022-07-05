@@ -4,7 +4,8 @@ import MySelect from "../UI/select/MySelect"
 
 import styles from "./Limit.module.css"
 
-const Limit = ( {limit, setLimit} ) => {
+const Limit = ( props ) => {
+    const {limit, setLimit} = props
     return (
         <MySelect
             value={limit}

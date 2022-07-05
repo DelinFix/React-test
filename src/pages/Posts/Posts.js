@@ -28,6 +28,7 @@ function Posts() {
     const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query)
     const lastElement = useRef()
 
+    // Fetching all posts with limit and page option
     const [fetchPosts, isPostsLoading, postError] = useFetching(async (limit, page) => {
         const response = await PostService.getAll(limit,page)
         setPosts([...posts, ...response.data])
@@ -35,6 +36,7 @@ function Posts() {
         setTotalPages(Math.ceil(totalCount / limit))
     })
 
+    // When you reach the last post it loads more
     useObserver(lastElement, page < totalPages, isPostsLoading, () => {
         setPage(page+1)
     })
@@ -43,11 +45,13 @@ function Posts() {
         fetchPosts(limit, page)
     }, [page, limit])
 
+    // To old post add a new one
     const createPost = (newPost) => {
         setPosts([newPost, ...posts])
         setModal(false)
     }
 
+    // Delete post by id
     const removePost = (post) => {
         setPosts(posts.filter((p) => p.id !== post.id))
     }

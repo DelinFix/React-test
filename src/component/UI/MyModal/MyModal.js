@@ -2,8 +2,9 @@ import React from 'react'
 
 import styles from './MyModal.module.css'
 
-const MyModal = ( {children, visible, setVisible} ) => {
-    const  rootClass = [styles.myModal]
+const MyModal = ( props ) => {
+    const { children, visible, setVisible } = props
+    const rootClass = [styles.myModal]
 
     if(visible) {
         rootClass.push(styles.active)

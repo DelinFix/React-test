@@ -9,6 +9,7 @@ function App() {
     const [isAuth, setIsAuth] = useState(false)
     const [isLoading] = useState(false)
 
+    // Checking if the user is authorized
     useEffect(() => {
         if(localStorage.getItem('auth')){
             setIsAuth(true)
