@@ -9,6 +9,7 @@ import styles from './PostList.module.css'
 
 const PostList = ( props ) => {
     const { posts, title, remove } = props
+    
     return (
         <div>
             {posts.length < 0

@@ -5,6 +5,7 @@ import styles from './Sort.module.css'
 
 const Sort = ( props ) => {
     const { filter, setFilter } = props
+    
     return (
         <MySelect
             value={filter.sort}
